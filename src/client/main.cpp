@@ -14,16 +14,17 @@ using namespace std;
 
 int main(int argc,char* argv[])
 {
+    cout << "Client application started." << endl;
     if (argc<1) {
         cout << "So far, nothing here..." << endl;
         return EXIT_FAILURE;
     }
-    client::Client client;
-    if (strcmp(argv[0],"hello")==0) {
+    client::Client client = client::Client();
+    if (strcmp(argv[1],"hello")==0) {
         client.helloWorld();
         return EXIT_SUCCESS;
     }
-    if (strcmp(argv[0],"state")==0) {
+    if (strcmp(argv[1],"state")==0) {
         client.printState();
         return EXIT_SUCCESS;
     }

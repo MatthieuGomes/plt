@@ -1,5 +1,6 @@
 #include "Client.h"
 #include <iostream>
+#include "../shared/state/State.h"
 
 namespace client
 {
