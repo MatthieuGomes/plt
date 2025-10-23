@@ -2,7 +2,7 @@
 
 // The following lines are here to check that SFML is installed and working
 #include <SFML/Graphics.hpp>
-#include <client/Client.h>  
+#include "client/Client.h"  
 #include <cstring>
 
 void testSFML() {
@@ -15,7 +15,7 @@ using namespace std;
 int main(int argc,char* argv[])
 {
     cout << "Client application started." << endl;
-    if (argc<1) {
+    if (argc<=1) {
         cout << "So far, nothing here..." << endl;
         return EXIT_FAILURE;
     }
@@ -28,5 +28,5 @@ int main(int argc,char* argv[])
         client.printState();
         return EXIT_SUCCESS;
     }
-    return 0;
+    return EXIT_SUCCESS;
 }
